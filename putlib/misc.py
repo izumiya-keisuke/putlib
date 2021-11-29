@@ -15,5 +15,9 @@ limitations under the License.
 """
 
 
+def id_fn(x: any) -> any:
+    return x
+
+
 def range1(end: int) -> range:
     return range(1, end + 1)
