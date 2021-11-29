@@ -30,15 +30,22 @@ class ProcessTarget(ABC):
 
 
 class Process(OriginalProcess):
-    def __init__(self, target:ProcessTarget, name:Optional[str]=None,daemon:Optional[bool]=None, *args,**kwargs) -> None:
+    def __init__(
+        self,
+        target: ProcessTarget,
+        name: Optional[str] = None,
+        daemon: Optional[bool] = None,
+        *args,
+        **kwargs,
+    ) -> None:
         super().__init__(target=target.run, name=name, args=args, kwargs=kwargs, daemon=daemon)
 
-        self._target_instance: ProcessTarget=target_instance
+        self._target_instance: ProcessTarget = target_instance
 
-    def terminate(self)->None:
+    def terminate(self) -> None:
         self._target_instance.end_process()
         super().terminate()
 
-    def kill(self)->None:
+    def kill(self) -> None:
         self._target_instance.end_process()
         super().kill()
