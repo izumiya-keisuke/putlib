@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "putlib"
+version = "0.1.0"
+description = "Python Utilities"
+authors = ["Keisuke Izumiya <izumiya.keisuke.24@gmail.com>"]
+maintainers = ["Keisuke Izumiya <izumiya.keisuke.24@gmail.com>"]
+license = "Apache-2.0"
+
+readme = "README.rst"
+
+repository = "https://github.com/izumiya-keisuke/putlib"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 100
+target-version = ['py36', 'py37', 'py38', 'py39']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.venv
+)/
+'''
