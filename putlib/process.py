@@ -21,11 +21,11 @@ from typing import Literal, Optional
 
 class ProcessTarget(ABC):
     @abstractmethod
-    def run(self):
+    def run(self) -> None:
         raise NotImplementedError
 
     @abstractmethod
-    def end_process(self):
+    def end_process(self) -> None:
         raise NotImplementedError
 
 
