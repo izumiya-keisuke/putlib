@@ -16,7 +16,7 @@ limitations under the License.
 
 from abc import abstractmethod, ABC
 from multiprocessing import Process as OriginalProcess
-from typing import Optional
+from typing import Literal, Optional
 
 
 class ProcessTarget(ABC):
@@ -32,11 +32,13 @@ class ProcessTarget(ABC):
 class Process(OriginalProcess):
     def __init__(
         self,
-        target: ProcessTarget,
+        group: Literal[None] = None,
+        target: Optional[ProcessTarget] = None,
         name: Optional[str] = None,
+        args: Optional[tuple[any, ...]] = None,
+        kwargs: Optional[dict[any, any]] = None,
+        *,
         daemon: Optional[bool] = None,
-        *args,
-        **kwargs,
     ) -> None:
         super().__init__(target=target.run, name=name, args=args, kwargs=kwargs, daemon=daemon)
 
