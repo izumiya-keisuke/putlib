@@ -20,7 +20,7 @@ from pathlib import Path
 from typing import Union
 
 
-_logger = getLogger(__name__)
+_logger: Logger = getLogger(__name__)
 
 
 def convert_to_path(path: Union[Path, str]) -> Path:
