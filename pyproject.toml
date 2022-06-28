@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "putlib"
-version = "0.3.3"
+version = "0.4.0"
 description = "Python Utilities"
 authors = ["Keisuke Izumiya <k.izumiya.13@gmail.com>"]
 maintainers = ["Keisuke Izumiya <k.izumiya.13@gmail.com>"]
