@@ -1,20 +1,18 @@
 ######
-Putlib
+putlib
 ######
 
-Putlib (Python UTility LIBrary) provides useful utilities with Python.
+putlib (Python UTility LIBrary) provides useful utilities with Python.
 
 *******
 Install
 *******
 
-If you use `poetry <https://python-poetry.org/>`_, you can install Putlib by following command:
-::
+If you use `poetry <https://python-poetry.org/>`_, you can install putlib by the following command::
 
     $ poetry add git+https://github.com/izumiya-keisuke/putlib.git#main
 
-Installing with pip is also supported:
-::
+Installation with pip is also supported::
 
     $ pip install https://github.com/izumiya-keisuke/putlib.git
 

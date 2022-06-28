@@ -29,7 +29,7 @@ def convert_to_path(path: Union[Path, str]) -> Path:
     if isinstance(path, Path):
         return path
 
-    _logger.error("`path` must be pathlib.Path or str, but got type=`%s`.", type(path))
+    _logger.error("`path` must be pathlib.Path or str, but got type=%s.", type(path))
     raise ValueError
 
 
